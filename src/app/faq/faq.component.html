@@ -1,0 +1,13 @@
+<h1>PERGUNTAS FREQUENTES!</h1>
+<div class="faq">
+  <div *ngFor="let item of items; let i = index" class="faq-item">
+    <div class="faq-header" (click)="toggleItem(i)">
+      {{ item.question }}
+      <span *ngIf="openedIndex !== i">+</span>
+      <span *ngIf="openedIndex === i">-</span>
+    </div>
+    <div [ngClass]="{'faq-content': true, 'open': openedIndex === i}">
+      {{ item.answer }}
+    </div>
+  </div>
+</div>

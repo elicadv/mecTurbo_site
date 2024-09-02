@@ -1,0 +1,80 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    position: relative; 
+}
+  
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+  
+.navbar .logo:hover {
+    transform: scale(1.1); 
+}
+  
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+  
+.navbar .menu li {
+    position: relative; 
+}
+  
+.navbar .menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    position: relative; 
+}
+  
+.navbar .menu li a:hover {
+    background-color: #555;
+    color: #f0f0f0;
+    transform: scale(1.05); 
+}
+  
+.navbar .menu li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f0f0f0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+  
+.navbar .menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Media query para telas com largura menor ou igual a 500px */
+@media only screen and (max-width: 500px) {
+    .navbar {
+        flex-direction: column; 
+    }
+   .navbar > *:last-child {
+        margin-bottom: 0; 
+    }
+    .navbar .menu li a {
+        color: hsl(135, 15%, 95%);
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+        position: relative; 
+        margin-left: -50%;
+    } 
+}

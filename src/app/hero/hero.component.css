@@ -1,0 +1,45 @@
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('/assets/imagens/picape.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+  }
+  
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+.hero h1 {
+    font-size: 48px;
+    color: #bbb;
+    text-shadow: 0 0 10px #bbb;
+    position: relative;
+    z-index: 2;
+}
+  
+.hero button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #bbb;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 2;
+}
+  
+.hero button:hover {
+    background-color: #bbb;
+}

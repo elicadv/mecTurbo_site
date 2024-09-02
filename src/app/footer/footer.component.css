@@ -1,0 +1,26 @@
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.footer .social-media {
+    margin-bottom: 10px;
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .social-media .istagram-icon,
+.footer .social-media .facebook-icon {
+    width: 40px; 
+    height: 40px; 
+}
+
+@media (max-width: 600px) {
+}
+
+
